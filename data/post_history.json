@@ -127,10 +127,26 @@
       "text_preview": "Off-the-shelf real estate templates are quietly killing your property sales.\n\nMany agency owners start with basic WordPress setups to list their properties. But as the portfolio grows, these generic t...",
       "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7480551697107292160/"
+    },
+    {
+      "id": "urn:li:share:7480979276176224256",
+      "timestamp": "2026-07-09T13:40:49.572720+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Optimizing database queries in Laravel to handle 10k+ daily users",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "b2b",
+        "vuejs",
+        "laravel"
+      ],
+      "text_preview": "Scaling Laravel for 10,000+ daily users isn't just about more servers; it's about smarter database queries.\n\nMany developers accidentally create an \"N+1 problem\" when fetching related data. Imagine li...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7480979276176224256/"
     }
   ],
-  "last_updated": "2026-07-08T09:21:46.868787+00:00",
-  "total_posts": 8,
+  "last_updated": "2026-07-09T13:40:49.572731+00:00",
+  "total_posts": 9,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -139,6 +155,7 @@
     "The importance of clean architecture in long-term freelance projects",
     "A real estate agency was losing leads due to slow load times. We rebuilt it in Laravel.",
     "Why I chose React Native for my rental business app 'Bookhere'",
-    "Why real estate agencies are moving away from generic templates to custom Flutter apps"
+    "Why real estate agencies are moving away from generic templates to custom Flutter apps",
+    "Optimizing database queries in Laravel to handle 10k+ daily users"
   ]
 }
