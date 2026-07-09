@@ -189,6 +189,8 @@ def generate_post_text(post_type: str, topic: str, hashtags: list) -> str:
             
             # Sanitize: remove any em dashes that slipped through
             text = text.replace("\u2014", "-").replace("\u2013", "-")
+            # Replace parentheses with brackets to prevent LinkedIn API truncation
+            text = text.replace("(", "[").replace(")", "]")
             
             # Ensure hashtags are at the end
             if not any(f"#{h}" in text for h in hashtags):
