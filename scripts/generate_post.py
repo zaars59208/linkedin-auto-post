@@ -1,0 +1,617 @@
+"""
+generate_post.py — Main orchestrator for LinkedIn auto-posting.
+
+Workflow:
+    1. Select post type and topic (via topic_manager)
+    2. Generate human-like post text via Gemini API
+    3. Generate relevant image via Imagen API (or Unsplash fallback)
+    4. Refresh LinkedIn token if needed
+    5. Upload image to LinkedIn
+    6. Publish post to LinkedIn /rest/posts
+    7. Update GitHub Secrets with new tokens (if refreshed)
+    8. Log post to data/post_history.json
+
+Run:
+    python scripts/generate_post.py              # Full run
+    python scripts/generate_post.py --dry-run    # Generate only, do NOT post
+    python scripts/generate_post.py --hint "React hooks"   # Topic hint
+"""
+
+import os
+import sys
+import json
+import time
+import base64
+import argparse
+import random
+import requests
+from datetime import datetime, timezone
+from pathlib import Path
+
+# Add parent dir to path
+sys.path.insert(0, str(Path(__file__).parent))
+from topic_manager import select_post_type_and_topic, get_hashtags, log_post
+
+from google import genai
+from google.genai import types as genai_types
+
+# ─── ENV VARS (from GitHub Secrets) ─────────────────────────────────────────
+GEMINI_API_KEY         = os.getenv("GEMINI_API_KEY", "")
+LINKEDIN_CLIENT_ID     = os.getenv("LINKEDIN_CLIENT_ID", "")
+LINKEDIN_CLIENT_SECRET = os.getenv("LINKEDIN_CLIENT_SECRET", "")
+LINKEDIN_ACCESS_TOKEN  = os.getenv("LINKEDIN_ACCESS_TOKEN", "")
+LINKEDIN_REFRESH_TOKEN = os.getenv("LINKEDIN_REFRESH_TOKEN", "")
+LINKEDIN_USER_URN      = os.getenv("LINKEDIN_USER_URN", "")
+GH_PAT                 = os.getenv("GH_PAT", "")
+GH_REPO                = os.getenv("GITHUB_REPOSITORY", "")  # auto-set by Actions
+DRY_RUN                = os.getenv("DRY_RUN", "false").lower() == "true"
+TOPIC_HINT             = os.getenv("TOPIC_HINT", "")
+# ─────────────────────────────────────────────────────────────────────────────
+
+LINKEDIN_API_BASE  = "https://api.linkedin.com"
+LINKEDIN_VERSION   = "202606"
+TOKEN_REFRESH_URL  = "https://www.linkedin.com/oauth/v2/accessToken"
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 1. POST TEXT GENERATION
+# ══════════════════════════════════════════════════════════════════════════════
+
+POST_PROMPTS = {
+    "niche_solutions": """You are Ayub Khokhar, an expert web and mobile developer from Pakistan working with clients in the US, Europe, Australia, Spain, and France.
+You are writing a LinkedIn post about a specific business solution: {topic}
+
+Write a HIGH-VALUE, authoritative LinkedIn post that:
+- Has a STRONG HOOK as the very first line (1 short sentence that grabs attention — a bold statement, shocking fact, or relatable problem)
+- Highlights a real business problem (in real estate, rentals, or e-commerce) and shows how you solve it
+- Mentions your specific tools naturally when relevant (PHP, Laravel, WordPress, Flutter, React Native, Node.js)
+- Uses first-person, professional voice aimed at B2B business owners and founders
+- Includes ONE specific example from your experience (e.g. "I recently built a booking system for a property company in Europe...")
+- Ends with a clear, specific call to action (e.g. "If your rental business is struggling with X, DM me")
+
+FORMATTING RULES (critical for LinkedIn readability):
+- Use SHORT paragraphs — maximum 2-3 lines each, then a blank line
+- Break the post into 4-5 sections with spacing between them
+- Keep each sentence punchy and direct
+- Ensure you write a fully complete, finished post. Do not cut off mid-sentence.
+
+STRICT RULES — NEVER break these:
+- No em dashes (—) at all
+- No "Game-changer", "Dive into", "Leverage", "Seamless", "Revolutionize"
+- No "In today's fast-paced digital world"
+- No numbered lists that cover the whole post
+- Do NOT put hashtags in the body — place them ONLY at the very end, after a blank line
+- Max 5 hashtags total
+- Make sure the final sentence is completely finished with proper punctuation before stopping.
+
+Write the post now. Output ONLY the post itself, nothing else:""",
+
+    "expertise_showcase": """You are Ayub Khokhar, a top-rated freelance developer (Upwork/Fiverr) from Pakistan, specializing in PHP, Laravel, WordPress, Flutter, and React Native for clients in the US, Europe, and Australia.
+You are writing a LinkedIn post showcasing a technical insight: {topic}
+
+Write a SHORT, insightful LinkedIn post that:
+- Starts with a HOOK — one bold, confident sentence that states the core insight
+- Explains the technical concept in plain English (not jargon-heavy)
+- Uses a short specific example from a real project you have worked on
+- Shows why this matters to the business owner, not just the developer
+- Ends with a genuine open question to spark comments from CTOs or tech founders
+
+FORMATTING RULES (critical for LinkedIn readability):
+- Use SHORT paragraphs — maximum 2-3 lines each, then a blank line
+- Break the post into 4-5 sections with spacing between them
+- Ensure you write a fully complete, finished post. Do not cut off mid-sentence.
+
+STRICT RULES — NEVER break these:
+- No em dashes (—) at all
+- No AI buzzwords ("Game-changer", "Delve", "Leverage", "Robust", "Cutting-edge")
+- No "In conclusion" or "To summarize"
+- Do NOT put hashtags in the body — place them ONLY at the very end, after a blank line
+- Max 5 hashtags total
+- Make sure the final sentence is completely finished with proper punctuation before stopping.
+
+Write the post now. Output ONLY the post itself, nothing else:""",
+
+    "client_growth_story": """You are Ayub Khokhar, a freelance software engineer from Pakistan who builds custom web and mobile apps for international clients (US, Europe, Australia).
+You are writing a LinkedIn post about a real client story: {topic}
+
+Write a COMPELLING story-style LinkedIn post that:
+- Starts with a HOOK that puts the reader IN the moment (e.g. "A real estate agency in Spain had a problem...") — NOT "I had a client who..."
+- Builds tension briefly (what was broken, what was at stake)
+- Describes your solution (keep it simple and human)
+- Ends with the result/impact (time saved, revenue increased, client happy)
+- Closes with a subtle open invitation: let people know you take on custom projects
+
+FORMATTING RULES (critical for LinkedIn readability):
+- Use SHORT paragraphs — maximum 2-3 lines each, then a blank line
+- Break the post into 4-5 sections with spacing between them
+- Ensure you write a fully complete, finished post. Do not cut off mid-sentence.
+
+STRICT RULES — NEVER break these:
+- No em dashes (—) at all
+- No AI buzzwords ("Revolutionize", "Embark", "Leverage", "Deliver value")
+- No headers or subheadings
+- Do NOT put hashtags in the body — place them ONLY at the very end, after a blank line
+- Max 5 hashtags total
+- Make sure the final sentence is completely finished with proper punctuation before stopping.
+
+Write the post now. Output ONLY the post itself, nothing else:""",
+
+    "tech_discovery": """You are Ayub Khokhar, an expert web and mobile developer building apps for international clients.
+You are writing a LinkedIn post about a technology insight or opinion: {topic}
+
+Write a SHORT, opinionated LinkedIn post that:
+- Starts with a HOOK — one bold opinion or surprising statement
+- Explains your view in 2-3 short paragraphs
+- Relates it back to how it helps your clients (real estate, rental, e-commerce)
+- Ends with a simple question to get the audience's opinion
+
+FORMATTING RULES (critical for LinkedIn readability):
+- Use SHORT paragraphs — maximum 2-3 lines each, then a blank line
+- Ensure you write a fully complete, finished post. Do not cut off mid-sentence.
+
+STRICT RULES — NEVER break these:
+- No em dashes (—) at all
+- No AI buzzwords
+- Do NOT put hashtags in the body — place them ONLY at the very end, after a blank line
+- Max 5 hashtags total
+- Make sure the final sentence is completely finished with proper punctuation before stopping.
+
+Write the post now. Output ONLY the post itself, nothing else:"""
+}
+
+
+def build_prompt(post_type: str, topic: str, hashtags: list) -> str:
+    template = POST_PROMPTS.get(post_type, POST_PROMPTS["niche_solutions"])
+    base_prompt = template.format(topic=topic)
+    hashtag_str = " ".join(f"#{h}" for h in hashtags)
+    base_prompt += f"\n\nEnd the post with exactly these hashtags on the last line:\n{hashtag_str}"
+    return base_prompt
+
+
+def generate_post_text(post_type: str, topic: str, hashtags: list) -> str:
+    """Generate post text using Gemini API."""
+    client = genai.Client(api_key=GEMINI_API_KEY)
+
+    prompt = build_prompt(post_type, topic, hashtags)
+    
+    for attempt in range(3):
+        try:
+            response = client.models.generate_content(
+                model="gemini-3.5-flash",
+                contents=prompt,
+                config=genai_types.GenerateContentConfig(
+                    temperature=0.90,
+                    top_p=0.95,
+                    max_output_tokens=2048,
+                ),
+            )
+            text = response.text.strip()
+            
+            # Sanitize: remove any em dashes that slipped through
+            text = text.replace("\u2014", "-").replace("\u2013", "-")
+            
+            # Ensure hashtags are at the end
+            if not any(f"#{h}" in text for h in hashtags):
+                hashtag_line = " ".join(f"#{h}" for h in hashtags)
+                text = f"{text}\n\n{hashtag_line}"
+            
+            print(f"[gemini] Post text generated ({len(text)} chars)")
+            return text
+            
+        except Exception as e:
+            print(f"[gemini] Attempt {attempt+1} failed: {e}")
+            time.sleep(2 ** attempt)
+
+    raise RuntimeError("Failed to generate post text after 3 attempts")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 2. IMAGE GENERATION
+# ══════════════════════════════════════════════════════════════════════════════
+
+IMAGE_PROMPTS = {
+    "niche_solutions":     "A sleek real estate or rental booking mobile app UI on a modern smartphone, clean professional design, tech-themed, photorealistic",
+    "expertise_showcase":  "A developer's ultra-clean workspace with Laravel or PHP code on dual monitors, dark theme, professional tech office, photorealistic",
+    "client_growth_story": "A professional remote video call between a developer in Pakistan and a client in Europe, laptop with code visible, warm lighting, realistic",
+    "tech_discovery":      "A modern developer exploring a new framework or tool on a widescreen monitor, dark UI, focused expression, photorealistic",
+}
+
+
+def generate_image_gemini(post_type: str, post_text: str) -> bytes | None:
+    """Try to generate image using Imagen 3."""
+    try:
+        client = genai.Client(api_key=GEMINI_API_KEY)
+        
+        base_prompt = IMAGE_PROMPTS.get(post_type, IMAGE_PROMPTS.get("niche_solutions", "Professional office"))
+        full_prompt = f"{base_prompt}. Professional LinkedIn post image, no text overlay."
+        
+        # Read the model name from config, fallback to imagen-3.0-generate-001
+        with open(Path(__file__).parent.parent / "config" / "settings.json", "r", encoding="utf-8") as f:
+            settings = json.load(f)
+        ai_model = settings.get("image_settings", {}).get("ai_model", "imagen-3.0-generate-001")
+        
+        result = client.models.generate_images(
+            model=ai_model,
+            prompt=full_prompt,
+            config=genai.types.GenerateImagesConfig(
+                number_of_images=1,
+                output_mime_type="image/jpeg",
+                aspect_ratio="16:9"
+            )
+        )
+        
+        for generated_image in result.generated_images:
+            print(f"[imagen] Image generated successfully via {ai_model}")
+            return generated_image.image.image_bytes
+            
+    except Exception as e:
+        print(f"[imagen] Failed (will use Unsplash fallback): {e}")
+    
+    return None
+
+
+def get_unsplash_image(post_type: str) -> tuple[str, bytes]:
+    """
+    Fallback: get a relevant curated image directly from Unsplash CDN.
+    Returns (url, image_bytes)
+    """
+    photo_urls = {
+        "niche_solutions": [
+            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop", # mobile app wireframes
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", # data/dashboard
+        ],
+        "expertise_showcase": [
+            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop", # developer laptop
+            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop", # code on screen
+        ],
+        "client_growth_story": [
+            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop", # people working
+            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop", # business meeting
+        ],
+        "tech_discovery": [
+            "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop", # modern tech setup
+            "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop", # glowing code
+        ]
+    }
+    
+    url = random.choice(photo_urls.get(post_type, photo_urls["niche_solutions"]))
+    print(f"[fallback] Downloading image from: {url}")
+    
+    try:
+        resp = requests.get(url, timeout=10)
+        if resp.ok:
+            return url, resp.content
+    except Exception as e:
+        print(f"[fallback] Error downloading image: {e}")
+        
+    return "", b""
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 3. LINKEDIN TOKEN MANAGEMENT
+# ══════════════════════════════════════════════════════════════════════════════
+
+def refresh_linkedin_token() -> tuple[str, str]:
+    """Refresh LinkedIn access token using refresh token."""
+    global LINKEDIN_ACCESS_TOKEN, LINKEDIN_REFRESH_TOKEN
+    
+    if not LINKEDIN_REFRESH_TOKEN:
+        print("[linkedin] No refresh token available. Using existing access token.")
+        return LINKEDIN_ACCESS_TOKEN, LINKEDIN_REFRESH_TOKEN
+    
+    print("[linkedin] Refreshing access token...")
+    resp = requests.post(TOKEN_REFRESH_URL, data={
+        "grant_type": "refresh_token",
+        "refresh_token": LINKEDIN_REFRESH_TOKEN,
+        "client_id": LINKEDIN_CLIENT_ID,
+        "client_secret": LINKEDIN_CLIENT_SECRET,
+    })
+    
+    if resp.ok:
+        data = resp.json()
+        new_access  = data.get("access_token", LINKEDIN_ACCESS_TOKEN)
+        new_refresh = data.get("refresh_token", LINKEDIN_REFRESH_TOKEN)
+        LINKEDIN_ACCESS_TOKEN  = new_access
+        LINKEDIN_REFRESH_TOKEN = new_refresh
+        print("[linkedin] Token refreshed successfully")
+        return new_access, new_refresh
+    else:
+        print(f"[linkedin] Token refresh failed: {resp.status_code} {resp.text}")
+        return LINKEDIN_ACCESS_TOKEN, LINKEDIN_REFRESH_TOKEN
+
+
+def validate_token() -> bool:
+    """Check if current access token is valid."""
+    headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "LinkedIn-Version": LINKEDIN_VERSION,
+    }
+    resp = requests.get(f"{LINKEDIN_API_BASE}/v2/userinfo", headers=headers, timeout=10)
+    return resp.status_code == 200
+
+
+def update_github_secrets(access_token: str, refresh_token: str) -> None:
+    """Update GitHub Secrets with new tokens via GitHub API."""
+    if not GH_PAT or not GH_REPO:
+        print("[github] Cannot update secrets — GH_PAT or GITHUB_REPOSITORY not set")
+        return
+    
+    try:
+        from nacl import encoding, public as nacl_public
+        
+        # Get repo public key for secret encryption
+        headers = {
+            "Authorization": f"Bearer {GH_PAT}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+        }
+        key_resp = requests.get(
+            f"https://api.github.com/repos/{GH_REPO}/actions/secrets/public-key",
+            headers=headers
+        )
+        
+        if not key_resp.ok:
+            print(f"[github] Failed to get public key: {key_resp.status_code}")
+            return
+        
+        key_data   = key_resp.json()
+        public_key = key_data["key"]
+        key_id     = key_data["key_id"]
+        
+        def encrypt_secret(public_key_str: str, secret_value: str) -> str:
+            pk = nacl_public.PublicKey(public_key_str.encode("utf-8"), encoding.Base64Encoder())
+            sealed_box = nacl_public.SealedBox(pk)
+            encrypted  = sealed_box.encrypt(secret_value.encode("utf-8"))
+            return base64.b64encode(encrypted).decode("utf-8")
+        
+        secrets_to_update = {
+            "LINKEDIN_ACCESS_TOKEN":  access_token,
+            "LINKEDIN_REFRESH_TOKEN": refresh_token,
+        }
+        
+        for secret_name, secret_value in secrets_to_update.items():
+            if not secret_value:
+                continue
+            encrypted = encrypt_secret(public_key, secret_value)
+            update_resp = requests.put(
+                f"https://api.github.com/repos/{GH_REPO}/actions/secrets/{secret_name}",
+                headers=headers,
+                json={"encrypted_value": encrypted, "key_id": key_id},
+            )
+            if update_resp.ok or update_resp.status_code == 204:
+                print(f"[github] Secret {secret_name} updated")
+            else:
+                print(f"[github] Failed to update {secret_name}: {update_resp.status_code}")
+    
+    except ImportError:
+        print("[github] PyNaCl not installed — cannot update secrets")
+    except Exception as e:
+        print(f"[github] Error updating secrets: {e}")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 4. LINKEDIN POSTING
+# ══════════════════════════════════════════════════════════════════════════════
+
+def get_auth_headers() -> dict:
+    return {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "LinkedIn-Version": LINKEDIN_VERSION,
+        "X-Restli-Protocol-Version": "2.0.0",
+        "Content-Type": "application/json",
+    }
+
+
+def upload_image_to_linkedin(image_bytes: bytes) -> str | None:
+    """Upload image to LinkedIn and return the asset URN."""
+    if not image_bytes:
+        return None
+    
+    headers = get_auth_headers()
+    
+    # Step 1: Register upload
+    register_body = {
+        "initializeUploadRequest": {
+            "owner": LINKEDIN_USER_URN,
+        }
+    }
+    
+    init_resp = requests.post(
+        f"{LINKEDIN_API_BASE}/rest/images?action=initializeUpload",
+        headers=headers,
+        json=register_body,
+        timeout=15,
+    )
+    
+    if not init_resp.ok:
+        print(f"[linkedin] Image init failed: {init_resp.status_code} {init_resp.text}")
+        return None
+    
+    init_data    = init_resp.json()
+    upload_url   = init_data["value"]["uploadUrl"]
+    image_urn    = init_data["value"]["image"]
+    
+    # Step 2: Upload binary
+    upload_headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Content-Type": "image/jpeg",
+    }
+    upload_resp = requests.put(upload_url, headers=upload_headers, data=image_bytes, timeout=30)
+    
+    if not upload_resp.ok:
+        print(f"[linkedin] Image upload failed: {upload_resp.status_code}")
+        return None
+    
+    print(f"[linkedin] Image uploaded: {image_urn}")
+    return image_urn
+
+
+def publish_post(text: str, image_urn: str | None = None) -> str | None:
+    """Publish the post to LinkedIn. Returns the post URN."""
+    headers = get_auth_headers()
+    
+    content = {
+        "author": LINKEDIN_USER_URN,
+        "commentary": text,
+        "visibility": "PUBLIC",
+        "distribution": {
+            "feedDistribution": "MAIN_FEED",
+            "targetEntities": [],
+            "thirdPartyDistributionChannels": [],
+        },
+        "lifecycleState": "PUBLISHED",
+        "isReshareDisabledByAuthor": False,
+    }
+    
+    if image_urn:
+        content["content"] = {
+            "media": {
+                "altText": "Developer workspace",
+                "id": image_urn,
+            }
+        }
+    
+    resp = requests.post(
+        f"{LINKEDIN_API_BASE}/rest/posts",
+        headers=headers,
+        json=content,
+        timeout=20,
+    )
+    
+    if resp.ok or resp.status_code == 201:
+        post_urn = resp.headers.get("x-restli-id", "")
+        print(f"[linkedin] Post published! URN: {post_urn}")
+        return post_urn
+    else:
+        print(f"[linkedin] Post failed: {resp.status_code}")
+        print(resp.text)
+        return None
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 5. MAIN ORCHESTRATOR
+# ══════════════════════════════════════════════════════════════════════════════
+
+def main(dry_run: bool = False, hint: str = "") -> None:
+    print("\n" + "="*55)
+    print("  LinkedIn Auto-Post — Starting")
+    print(f"  Mode: {'DRY RUN (no posting)' if dry_run else 'LIVE'}")
+    print(f"  Time: {datetime.now(timezone.utc).isoformat()}")
+    print("="*55 + "\n")
+
+    # Validate config
+    if not GEMINI_API_KEY:
+        raise EnvironmentError("GEMINI_API_KEY is not set")
+    if not LINKEDIN_USER_URN and not dry_run:
+        raise EnvironmentError("LINKEDIN_USER_URN is not set")
+
+    # Check daily schedule quota
+    with open(Path(__file__).parent.parent / "config" / "settings.json", "r", encoding="utf-8") as f:
+        settings = json.load(f)
+    
+    schedule = settings.get("schedule", {})
+    days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    today_day = days[datetime.now(timezone.utc).weekday()]
+    allowed_posts = schedule.get(today_day, 1)
+
+    # Check history for today
+    posts_today = 0
+    history_file = Path(__file__).parent.parent / "data" / "post_history.json"
+    if history_file.exists():
+        with open(history_file, "r", encoding="utf-8") as f:
+            hist = json.load(f)
+            today_str = datetime.now(timezone.utc).date().isoformat()
+            posts_today = sum(1 for p in hist.get("posts", []) if p.get("timestamp", "").startswith(today_str))
+
+    print(f"[quota] Today is {today_day.capitalize()}. Allowed: {allowed_posts}. Posted: {posts_today}")
+    if posts_today >= allowed_posts and not dry_run:
+        print("[quota] Daily quota met. Skipping post execution.")
+        return
+
+    # 1. Select topic
+    post_type, topic = select_post_type_and_topic(hint or TOPIC_HINT)
+    hashtags          = get_hashtags(post_type, topic)
+    print(f"[step 1] Post type: {post_type}")
+    print(f"[step 1] Topic: {topic}")
+    print(f"[step 1] Hashtags: {hashtags}\n")
+
+    # 2. Generate text
+    print("[step 2] Generating post text...")
+    post_text = generate_post_text(post_type, topic, hashtags)
+    print(f"\n{'─'*50}\n{post_text}\n{'─'*50}\n")
+
+    # 3. Generate image
+    print("[step 3] Generating image...")
+    image_settings = settings.get("image_settings", {})
+    source_pref = image_settings.get("source", "unsplash").lower()
+    
+    if source_pref == "both":
+        source_pref = random.choice(["ai", "unsplash"])
+        
+    image_bytes = None
+    image_url = ""
+    
+    if source_pref == "ai":
+        image_bytes = generate_image_gemini(post_type, post_text)
+        if not image_bytes:
+            print("[step 3] AI failed, falling back to Unsplash")
+            image_url, image_bytes = get_unsplash_image(post_type)
+    else:
+        image_url, image_bytes = get_unsplash_image(post_type)
+        print(f"[step 3] Using Unsplash image: {image_url}")
+
+    if dry_run:
+        print("\n[DRY RUN] Skipping LinkedIn posting. Post content above is what would be published.")
+        print(f"[DRY RUN] Image source: {image_url or 'Gemini-generated'}")
+        return
+
+    # 4. Validate / refresh LinkedIn token
+    print("[step 4] Validating LinkedIn token...")
+    token_refreshed  = False
+    new_access_token = LINKEDIN_ACCESS_TOKEN
+    new_refresh_token = LINKEDIN_REFRESH_TOKEN
+    
+    if not validate_token():
+        print("[step 4] Token invalid. Refreshing...")
+        new_access_token, new_refresh_token = refresh_linkedin_token()
+        if not validate_token():
+            raise RuntimeError("LinkedIn token is invalid and could not be refreshed. Re-run token_helper.py locally.")
+        token_refreshed = True
+    else:
+        print("[step 4] Token valid.")
+
+    # 5. Upload image
+    print("[step 5] Uploading image to LinkedIn...")
+    image_urn = upload_image_to_linkedin(image_bytes) if image_bytes else None
+
+    # 6. Publish post
+    print("[step 6] Publishing post...")
+    post_urn = publish_post(post_text, image_urn)
+
+    if not post_urn:
+        raise RuntimeError("Post failed to publish. Check logs above.")
+
+    # 7. Update GitHub secrets if token was refreshed
+    if token_refreshed:
+        print("[step 7] Updating GitHub Secrets with new tokens...")
+        update_github_secrets(new_access_token, new_refresh_token)
+    else:
+        print("[step 7] Token not refreshed, skipping secret update.")
+
+    # 8. Log post
+    print("[step 8] Logging post to history...")
+    log_post(post_type, topic, hashtags, post_urn, post_text, image_url)
+
+    print("\n" + "="*55)
+    print("  SUCCESS! Post published to LinkedIn.")
+    print(f"  URN: {post_urn}")
+    print("="*55 + "\n")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="LinkedIn Auto-Post Generator")
+    parser.add_argument("--dry-run", action="store_true", help="Generate post without publishing")
+    parser.add_argument("--hint", type=str, default="", help="Optional topic hint keyword")
+    args = parser.parse_args()
+    
+    main(dry_run=args.dry_run or DRY_RUN, hint=args.hint)

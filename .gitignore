@@ -1,0 +1,7 @@
+.env
+data/tokens_backup.json
+scripts/__pycache__/
+__pycache__/
+.gemini/
+*.log
+job_log.txt

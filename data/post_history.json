@@ -1,0 +1,144 @@
+{
+  "posts": [
+    {
+      "id": "urn:li:share:7478795792003280896",
+      "timestamp": "2026-07-03T13:04:26.315774+00:00",
+      "post_type": "niche_solutions",
+      "topic": "Automating property bookings and tenant management with Node.js and Express",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "freelance",
+        "nodejs",
+        "laravel"
+      ],
+      "text_preview": "Property management companies often lose revenue because of a slow, manual booking and onboarding process. When a prospective tenant has to wait days for background checks, lease\n\n#webdevelopment #sof...",
+      "image_url": "",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7478795792003280896/"
+    },
+    {
+      "id": "urn:li:share:7478796210422571008",
+      "timestamp": "2026-07-03T13:06:06.129601+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "WordPress theme customization: going beyond page builders to write actual code",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "businessgrowth",
+        "b2b",
+        "flutter"
+      ],
+      "text_preview": "Many businesses choose WordPress for its ease of use, but then fall into the trap of stacking heavy page builders and endless plugins. The result is a sluggish, un\n\n#webdevelopment #softwareengineerin...",
+      "image_url": "",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7478796210422571008/"
+    },
+    {
+      "id": "urn:li:share:7478799174189297664",
+      "timestamp": "2026-07-03T13:17:52.875300+00:00",
+      "post_type": "tech_discovery",
+      "topic": "Why I insist on proper CI/CD pipelines even for small freelance projects",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "techcommunity",
+        "wordpress",
+        "fiverr"
+      ],
+      "text_preview": "Skipping CI/CD on small freelance projects is a recipe for disaster.\n\nMany developers think automated pipelines are only for big enterprise teams. They rely on manual FTP uploads or quick git pulls on...",
+      "image_url": "",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7478799174189297664/"
+    },
+    {
+      "id": "urn:li:share:7479069595920826368",
+      "timestamp": "2026-07-04T07:12:26.682996+00:00",
+      "post_type": "client_growth_story",
+      "topic": "A client from Europe needed a custom booking system after their SaaS failed them",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "upwork",
+        "realestateapp",
+        "reactnative"
+      ],
+      "text_preview": "A boutique real estate agency in Spain was losing thousands of Euros every week.\nTheir expensive SaaS booking software kept crashing during peak viewing hours.\nClients could not book property tours, a...",
+      "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7479069595920826368/"
+    },
+    {
+      "id": "urn:li:share:7479467912114651136",
+      "timestamp": "2026-07-05T09:35:12.525146+00:00",
+      "post_type": "tech_discovery",
+      "topic": "The importance of clean architecture in long-term freelance projects",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "mobileappdevelopment",
+        "freelance",
+        "angular"
+      ],
+      "text_preview": "Most freelance developers build apps that are designed to fail after six months of scaling.\n\nWhen you are hired to build a custom application, speed is often the main priority. But skipping clean arch...",
+      "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7479467912114651136/"
+    },
+    {
+      "id": "urn:li:share:7479857501585461248",
+      "timestamp": "2026-07-06T11:23:17.677986+00:00",
+      "post_type": "client_growth_story",
+      "topic": "A real estate agency was losing leads due to slow load times. We rebuilt it in Laravel.",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "nodejs",
+        "bookingsoftware",
+        "php"
+      ],
+      "text_preview": "A luxury real estate agency in Spain was losing thousands of Euros in commissions every single week.\n\nTheir property website took nearly eight seconds to load a single page.\n\nHigh-net-worth buyers loo...",
+      "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7479857501585461248/"
+    },
+    {
+      "id": "urn:li:share:7480203934851219456",
+      "timestamp": "2026-07-07T10:19:53.825290+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Why I chose React Native for my rental business app 'Bookhere'",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "upwork",
+        "wordpress",
+        "fiverr"
+      ],
+      "text_preview": "Building two separate apps for iOS and Android is a massive waste of your budget when a single codebase can deliver the exact same native experience.\n\nReact Native allows developers to write code once...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7480203934851219456/"
+    },
+    {
+      "id": "urn:li:share:7480551697107292160",
+      "timestamp": "2026-07-08T09:21:46.868773+00:00",
+      "post_type": "niche_solutions",
+      "topic": "Why real estate agencies are moving away from generic templates to custom Flutter apps",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "reactnative",
+        "mobileappdevelopment",
+        "techcommunity"
+      ],
+      "text_preview": "Off-the-shelf real estate templates are quietly killing your property sales.\n\nMany agency owners start with basic WordPress setups to list their properties. But as the portfolio grows, these generic t...",
+      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7480551697107292160/"
+    }
+  ],
+  "last_updated": "2026-07-08T09:21:46.868787+00:00",
+  "total_posts": 8,
+  "topics_used": [
+    "Automating property bookings and tenant management with Node.js and Express",
+    "WordPress theme customization: going beyond page builders to write actual code",
+    "Why I insist on proper CI/CD pipelines even for small freelance projects",
+    "A client from Europe needed a custom booking system after their SaaS failed them",
+    "The importance of clean architecture in long-term freelance projects",
+    "A real estate agency was losing leads due to slow load times. We rebuilt it in Laravel.",
+    "Why I chose React Native for my rental business app 'Bookhere'",
+    "Why real estate agencies are moving away from generic templates to custom Flutter apps"
+  ]
+}
