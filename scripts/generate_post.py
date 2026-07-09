@@ -174,10 +174,10 @@ def generate_post_text(post_type: str, topic: str, hashtags: list) -> str:
 
     prompt = build_prompt(post_type, topic, hashtags)
     
-    for attempt in range(3):
+    for attempt in range(5):
         try:
             response = client.models.generate_content(
-                model="gemini-3.5-flash",
+                model="gemini-2.5-flash",
                 contents=prompt,
                 config=genai_types.GenerateContentConfig(
                     temperature=0.90,
@@ -200,9 +200,9 @@ def generate_post_text(post_type: str, topic: str, hashtags: list) -> str:
             
         except Exception as e:
             print(f"[gemini] Attempt {attempt+1} failed: {e}")
-            time.sleep(2 ** attempt)
+            time.sleep(3 + 3 * attempt)
 
-    raise RuntimeError("Failed to generate post text after 3 attempts")
+    raise RuntimeError("Failed to generate post text after 5 attempts")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
