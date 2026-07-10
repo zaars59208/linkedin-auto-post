@@ -143,10 +143,26 @@
       "text_preview": "Scaling Laravel for 10,000+ daily users isn't just about more servers; it's about smarter database queries.\n\nMany developers accidentally create an \"N+1 problem\" when fetching related data. Imagine li...",
       "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7480979276176224256/"
+    },
+    {
+      "id": "urn:li:share:7481258042941104128",
+      "timestamp": "2026-07-10T08:08:33.352383+00:00",
+      "post_type": "tech_discovery",
+      "topic": "My favorite tools for testing APIs before integrating them into a client's frontend",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "php",
+        "bookingsoftware",
+        "freelance"
+      ],
+      "text_preview": "Forget complex graphical interfaces. My secret weapon for initial API testing is surprisingly simple: the command line and `curl`. Nothing beats its speed and raw visibility into HTTP requests and res...",
+      "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7481258042941104128/"
     }
   ],
-  "last_updated": "2026-07-09T13:40:49.572731+00:00",
-  "total_posts": 9,
+  "last_updated": "2026-07-10T08:08:33.352402+00:00",
+  "total_posts": 10,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -156,6 +172,7 @@
     "A real estate agency was losing leads due to slow load times. We rebuilt it in Laravel.",
     "Why I chose React Native for my rental business app 'Bookhere'",
     "Why real estate agencies are moving away from generic templates to custom Flutter apps",
-    "Optimizing database queries in Laravel to handle 10k+ daily users"
+    "Optimizing database queries in Laravel to handle 10k+ daily users",
+    "My favorite tools for testing APIs before integrating them into a client's frontend"
   ]
 }
