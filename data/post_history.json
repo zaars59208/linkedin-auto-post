@@ -159,10 +159,26 @@
       "text_preview": "Forget complex graphical interfaces. My secret weapon for initial API testing is surprisingly simple: the command line and `curl`. Nothing beats its speed and raw visibility into HTTP requests and res...",
       "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7481258042941104128/"
+    },
+    {
+      "id": "urn:li:share:7481628945948332032",
+      "timestamp": "2026-07-11T08:42:22.931071+00:00",
+      "post_type": "client_growth_story",
+      "topic": "Building trust with international clients (US/Europe) as a remote developer",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "wordpress",
+        "upwork",
+        "businessgrowth"
+      ],
+      "text_preview": "Picture this: a thriving online boutique in New York, specializing in unique artisanal gifts. Their products were beautiful, but their internal system for managing inventory and orders was a tangled m...",
+      "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7481628945948332032/"
     }
   ],
-  "last_updated": "2026-07-10T08:08:33.352402+00:00",
-  "total_posts": 10,
+  "last_updated": "2026-07-11T08:42:22.931089+00:00",
+  "total_posts": 11,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -173,6 +189,7 @@
     "Why I chose React Native for my rental business app 'Bookhere'",
     "Why real estate agencies are moving away from generic templates to custom Flutter apps",
     "Optimizing database queries in Laravel to handle 10k+ daily users",
-    "My favorite tools for testing APIs before integrating them into a client's frontend"
+    "My favorite tools for testing APIs before integrating them into a client's frontend",
+    "Building trust with international clients (US/Europe) as a remote developer"
   ]
 }
