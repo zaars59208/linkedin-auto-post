@@ -175,10 +175,26 @@
       "text_preview": "Picture this: a thriving online boutique in New York, specializing in unique artisanal gifts. Their products were beautiful, but their internal system for managing inventory and orders was a tangled m...",
       "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7481628945948332032/"
+    },
+    {
+      "id": "urn:li:share:7481995436980088832",
+      "timestamp": "2026-07-12T08:58:41.707127+00:00",
+      "post_type": "tech_discovery",
+      "topic": "The truth about cross-platform development (React Native/Flutter) in 2026",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "fiverr",
+        "flutter",
+        "techcommunity"
+      ],
+      "text_preview": "By 2026, the \"native vs. cross-platform\" debate for most business applications will be entirely irrelevant.\n\nThis isn't about a single framework winning. It's about the relentless maturity of Flutter ...",
+      "image_url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7481995436980088832/"
     }
   ],
-  "last_updated": "2026-07-11T08:42:22.931089+00:00",
-  "total_posts": 11,
+  "last_updated": "2026-07-12T08:58:41.707152+00:00",
+  "total_posts": 12,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -190,6 +206,7 @@
     "Why real estate agencies are moving away from generic templates to custom Flutter apps",
     "Optimizing database queries in Laravel to handle 10k+ daily users",
     "My favorite tools for testing APIs before integrating them into a client's frontend",
-    "Building trust with international clients (US/Europe) as a remote developer"
+    "Building trust with international clients (US/Europe) as a remote developer",
+    "The truth about cross-platform development (React Native/Flutter) in 2026"
   ]
 }
