@@ -223,10 +223,26 @@
       "text_preview": "Your rental business is likely leaving 40% of potential bookings on the table. This isn't just a guess; it's a common outcome for businesses without optimised booking experiences.\n\nMany rental and e-c...",
       "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7482720471168258048/"
+    },
+    {
+      "id": "urn:li:share:7482782966142812160",
+      "timestamp": "2026-07-14T13:08:03.376941+00:00",
+      "post_type": "client_growth_story",
+      "topic": "How clear communication on Fiverr led to a 3-year ongoing development contract",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "api",
+        "fiverr",
+        "bookingsoftware"
+      ],
+      "text_preview": "A real estate agency in Spain was drowning in manual bookings.\n\nTheir agents spent hours each day juggling spreadsheets and phone calls, trying to schedule property viewings. Missed appointments were ...",
+      "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7482782966142812160/"
     }
   ],
-  "last_updated": "2026-07-14T08:59:43.395014+00:00",
-  "total_posts": 14,
+  "last_updated": "2026-07-14T13:08:03.376957+00:00",
+  "total_posts": 15,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -241,6 +257,7 @@
     "Building trust with international clients (US/Europe) as a remote developer",
     "The truth about cross-platform development (React Native/Flutter) in 2026",
     "Cross-platform mobile apps for real estate agents: Flutter vs React Native",
-    "How a dedicated booking mobile app increases rental conversions by 40%"
+    "How a dedicated booking mobile app increases rental conversions by 40%",
+    "How clear communication on Fiverr led to a 3-year ongoing development contract"
   ]
 }
