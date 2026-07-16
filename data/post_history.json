@@ -255,10 +255,26 @@
       "text_preview": "The single most critical step to handling payment gateway webhooks securely in Express.js is always, *always* verifying the signature.\n\nWebhooks are crucial for real-time updates from services like St...",
       "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7483084186740944896/"
+    },
+    {
+      "id": "urn:li:share:7483447456102445056",
+      "timestamp": "2026-07-16T09:08:30.135039+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Building reusable custom plugins in WordPress that don't bloat the site",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "techcommunity",
+        "realestateapp",
+        "laravel"
+      ],
+      "text_preview": "The secret to a high-performing WordPress site with custom features? Focused, lean plugin architecture.\n\nThe common misconception that custom plugins inherently lead to bloat is easily overcome. The s...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7483447456102445056/"
     }
   ],
-  "last_updated": "2026-07-15T09:04:59.938608+00:00",
-  "total_posts": 16,
+  "last_updated": "2026-07-16T09:08:30.135056+00:00",
+  "total_posts": 17,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -275,6 +291,7 @@
     "Cross-platform mobile apps for real estate agents: Flutter vs React Native",
     "How a dedicated booking mobile app increases rental conversions by 40%",
     "How clear communication on Fiverr led to a 3-year ongoing development contract",
-    "How to securely handle webhooks from payment gateways in Express.js"
+    "How to securely handle webhooks from payment gateways in Express.js",
+    "Building reusable custom plugins in WordPress that don't bloat the site"
   ]
 }
