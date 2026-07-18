@@ -287,10 +287,26 @@
       "text_preview": "The \"native feel\" argument against cross-platform apps will be completely irrelevant by 2026. The gap between native and frameworks like React Native or Flutter is closing so fast, it's already a non-...",
       "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7483808633475231744/"
+    },
+    {
+      "id": "urn:li:share:7484165782319292416",
+      "timestamp": "2026-07-18T08:42:52.449990+00:00",
+      "post_type": "client_growth_story",
+      "topic": "Rescuing a Node.js project that was abandoned by the previous developer",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "api",
+        "businessgrowth",
+        "mobileappdevelopment"
+      ],
+      "text_preview": "A real estate agency in Spain faced a critical problem. Their custom Node.js backend, which managed property listings and client inquiries, had suddenly stopped working. The previous developer had dis...",
+      "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7484165782319292416/"
     }
   ],
-  "last_updated": "2026-07-17T09:03:41.145200+00:00",
-  "total_posts": 18,
+  "last_updated": "2026-07-18T08:42:52.450006+00:00",
+  "total_posts": 19,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -308,6 +324,7 @@
     "How a dedicated booking mobile app increases rental conversions by 40%",
     "How clear communication on Fiverr led to a 3-year ongoing development contract",
     "How to securely handle webhooks from payment gateways in Express.js",
-    "Building reusable custom plugins in WordPress that don't bloat the site"
+    "Building reusable custom plugins in WordPress that don't bloat the site",
+    "Rescuing a Node.js project that was abandoned by the previous developer"
   ]
 }
