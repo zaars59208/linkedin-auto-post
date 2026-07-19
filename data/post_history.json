@@ -303,10 +303,26 @@
       "text_preview": "A real estate agency in Spain faced a critical problem. Their custom Node.js backend, which managed property listings and client inquiries, had suddenly stopped working. The previous developer had dis...",
       "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7484165782319292416/"
+    },
+    {
+      "id": "urn:li:share:7484532886352642048",
+      "timestamp": "2026-07-19T09:01:36.799892+00:00",
+      "post_type": "niche_solutions",
+      "topic": "How custom Laravel backends power high-traffic real estate portals better than CMS plugins",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "nodejs",
+        "angular",
+        "techcommunity"
+      ],
+      "text_preview": "Scaling a real estate portal on generic CMS plugins is a ticking time bomb for your business.\n\nMany property businesses launch with plugins on platforms like WordPress. While convenient initially, the...",
+      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7484532886352642048/"
     }
   ],
-  "last_updated": "2026-07-18T08:42:52.450006+00:00",
-  "total_posts": 19,
+  "last_updated": "2026-07-19T09:01:36.799912+00:00",
+  "total_posts": 20,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -325,6 +341,7 @@
     "How clear communication on Fiverr led to a 3-year ongoing development contract",
     "How to securely handle webhooks from payment gateways in Express.js",
     "Building reusable custom plugins in WordPress that don't bloat the site",
-    "Rescuing a Node.js project that was abandoned by the previous developer"
+    "Rescuing a Node.js project that was abandoned by the previous developer",
+    "How custom Laravel backends power high-traffic real estate portals better than CMS plugins"
   ]
 }
