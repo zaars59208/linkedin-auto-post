@@ -351,10 +351,26 @@
       "text_preview": "True WordPress customization isn't just about drag-and-drop; it's about crafting code that brings unique visions to life.\n\nWhile page builders are fantastic for quick layouts, they often hit limits wh...",
       "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7485263065710657536/"
+    },
+    {
+      "id": "urn:li:share:7485321922243837952",
+      "timestamp": "2026-07-21T13:16:57.518262+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Optimizing database queries in Laravel to handle 10k+ daily users",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "wordpress",
+        "nodejs",
+        "mobileappdevelopment"
+      ],
+      "text_preview": "Scaling Laravel for 10,000+ daily users isn't about throwing more servers at the problem. It's about making your database queries truly smarter.\n\nOften, a slow application isn't due to heavy traffic i...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7485321922243837952/"
     }
   ],
-  "last_updated": "2026-07-21T09:23:05.216208+00:00",
-  "total_posts": 22,
+  "last_updated": "2026-07-21T13:16:57.518277+00:00",
+  "total_posts": 23,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
