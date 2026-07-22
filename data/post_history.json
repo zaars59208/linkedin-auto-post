@@ -367,10 +367,26 @@
       "text_preview": "Scaling Laravel for 10,000+ daily users isn't about throwing more servers at the problem. It's about making your database queries truly smarter.\n\nOften, a slow application isn't due to heavy traffic i...",
       "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7485321922243837952/"
+    },
+    {
+      "id": "urn:li:share:7485625215947984896",
+      "timestamp": "2026-07-22T09:22:08.546907+00:00",
+      "post_type": "tech_discovery",
+      "topic": "The importance of clean architecture in long-term freelance projects",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "businessgrowth",
+        "laravel",
+        "realestateapp"
+      ],
+      "text_preview": "Skipping clean architecture on a long-term freelance project isn't saving time; it's signing a death warrant for future maintainability.\n\nMany developers rush for immediate delivery, cutting corners o...",
+      "image_url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7485625215947984896/"
     }
   ],
-  "last_updated": "2026-07-21T13:16:57.518277+00:00",
-  "total_posts": 23,
+  "last_updated": "2026-07-22T09:22:08.546926+00:00",
+  "total_posts": 24,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
