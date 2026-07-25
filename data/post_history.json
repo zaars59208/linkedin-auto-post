@@ -415,10 +415,26 @@
       "text_preview": "Imagine a thriving real estate agency in Spain, relying heavily on their custom web application to manage listings, clients, and sales. Suddenly, their critical Node.js backend, the heart of their ope...",
       "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7486348218864177152/"
+    },
+    {
+      "id": "urn:li:share:7486705593387433984",
+      "timestamp": "2026-07-25T08:55:10.569407+00:00",
+      "post_type": "client_growth_story",
+      "topic": "The moment a client realized their custom mobile app paid for itself in one month",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "techcommunity",
+        "api",
+        "vuejs"
+      ],
+      "text_preview": "A bustling real estate agency in London faced a daily headache. Their agents spent endless hours manually planning property tours. Imagine a sales team, not selling, but wrestling with spreadsheets, m...",
+      "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7486705593387433984/"
     }
   ],
-  "last_updated": "2026-07-24T09:15:05.470409+00:00",
-  "total_posts": 26,
+  "last_updated": "2026-07-25T08:55:10.569426+00:00",
+  "total_posts": 27,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -440,6 +456,7 @@
     "Rescuing a Node.js project that was abandoned by the previous developer",
     "How custom Laravel backends power high-traffic real estate portals better than CMS plugins",
     "The architecture behind 'Bookhere': my React Native booking & rental platform",
-    "Why off-the-shelf rental software fails when your business scales"
+    "Why off-the-shelf rental software fails when your business scales",
+    "The moment a client realized their custom mobile app paid for itself in one month"
   ]
 }
