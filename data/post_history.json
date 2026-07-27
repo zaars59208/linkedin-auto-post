@@ -447,10 +447,26 @@
       "text_preview": "Every second your rental website takes to load, you lose a potential booking.\n\nThis isn't an exaggeration. Prospects browsing for properties have zero patience for slow interfaces or confusing navigat...",
       "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7487071081942597632/"
+    },
+    {
+      "id": "urn:li:share:7487454911480381440",
+      "timestamp": "2026-07-27T10:32:41.917546+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Why PHP and Laravel are still the absolute kings of custom business applications",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "angular",
+        "nodejs",
+        "businessgrowth"
+      ],
+      "text_preview": "PHP and Laravel remain the undisputed champions for building custom business applications that truly scale and deliver.\n\nThis isn't just a developer's preference; it's about unparalleled efficiency an...",
+      "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7487454911480381440/"
     }
   ],
-  "last_updated": "2026-07-26T09:07:29.815818+00:00",
-  "total_posts": 28,
+  "last_updated": "2026-07-27T10:32:41.917565+00:00",
+  "total_posts": 29,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -474,6 +490,7 @@
     "The architecture behind 'Bookhere': my React Native booking & rental platform",
     "Why off-the-shelf rental software fails when your business scales",
     "The moment a client realized their custom mobile app paid for itself in one month",
-    "Why speed and UI/UX matter more than ever in rental websites"
+    "Why speed and UI/UX matter more than ever in rental websites",
+    "Why PHP and Laravel are still the absolute kings of custom business applications"
   ]
 }
