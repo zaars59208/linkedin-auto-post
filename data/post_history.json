@@ -463,10 +463,26 @@
       "text_preview": "PHP and Laravel remain the undisputed champions for building custom business applications that truly scale and deliver.\n\nThis isn't just a developer's preference; it's about unparalleled efficiency an...",
       "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7487454911480381440/"
+    },
+    {
+      "id": "urn:li:share:7487801715648270337",
+      "timestamp": "2026-07-28T09:30:46.016719+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Building CI/CD pipelines that deploy Laravel and Node.js apps without downtime",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "techcommunity",
+        "realestateapp",
+        "mobileappdevelopment"
+      ],
+      "text_preview": "Deploying Laravel or Node.js applications with zero downtime isn't magic; it's smart engineering.\n\nMany assume app updates mean service interruptions. But with the right CI/CD pipeline, we can push ne...",
+      "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7487801715648270337/"
     }
   ],
-  "last_updated": "2026-07-27T10:32:41.917565+00:00",
-  "total_posts": 29,
+  "last_updated": "2026-07-28T09:30:46.016738+00:00",
+  "total_posts": 30,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -491,6 +507,7 @@
     "Why off-the-shelf rental software fails when your business scales",
     "The moment a client realized their custom mobile app paid for itself in one month",
     "Why speed and UI/UX matter more than ever in rental websites",
-    "Why PHP and Laravel are still the absolute kings of custom business applications"
+    "Why PHP and Laravel are still the absolute kings of custom business applications",
+    "Building CI/CD pipelines that deploy Laravel and Node.js apps without downtime"
   ]
 }
