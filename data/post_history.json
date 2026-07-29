@@ -495,10 +495,26 @@
       "text_preview": "Stop debugging API integrations in your frontend. Test first, always.\n\nMy favorite \"tool\" isn't a single application, but a disciplined workflow. For initial contract validation and quick sanity check...",
       "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7487862016754343938/"
+    },
+    {
+      "id": "urn:li:share:7488164561234071553",
+      "timestamp": "2026-07-29T09:32:35.609098+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "How to securely handle webhooks from payment gateways in Express.js",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "bookingsoftware",
+        "reactnative",
+        "flutter"
+      ],
+      "text_preview": "Your payment gateway webhooks are a direct line to your business logic; treat them with military-grade security.\n\nWebhooks are automated messages from services like Stripe or PayPal, telling your appl...",
+      "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7488164561234071553/"
     }
   ],
-  "last_updated": "2026-07-28T13:30:22.852097+00:00",
-  "total_posts": 31,
+  "last_updated": "2026-07-29T09:32:35.609113+00:00",
+  "total_posts": 32,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
