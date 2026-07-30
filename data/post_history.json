@@ -511,10 +511,26 @@
       "text_preview": "Your payment gateway webhooks are a direct line to your business logic; treat them with military-grade security.\n\nWebhooks are automated messages from services like Stripe or PayPal, telling your appl...",
       "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7488164561234071553/"
+    },
+    {
+      "id": "urn:li:share:7488585915066527744",
+      "timestamp": "2026-07-30T13:26:54.202751+00:00",
+      "post_type": "niche_solutions",
+      "topic": "Syncing external property APIs (like MLS) directly into a custom WordPress or Laravel site",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "fiverr",
+        "api",
+        "upwork"
+      ],
+      "text_preview": "Is your property website still showing outdated listings?\n\nManual data entry for real estate or rental platforms is a silent drain on your business. It wastes valuable time, frustrates potential clien...",
+      "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7488585915066527744/"
     }
   ],
-  "last_updated": "2026-07-29T09:32:35.609113+00:00",
-  "total_posts": 32,
+  "last_updated": "2026-07-30T13:26:54.202767+00:00",
+  "total_posts": 33,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -540,6 +556,7 @@
     "The moment a client realized their custom mobile app paid for itself in one month",
     "Why speed and UI/UX matter more than ever in rental websites",
     "Why PHP and Laravel are still the absolute kings of custom business applications",
-    "Building CI/CD pipelines that deploy Laravel and Node.js apps without downtime"
+    "Building CI/CD pipelines that deploy Laravel and Node.js apps without downtime",
+    "Syncing external property APIs (like MLS) directly into a custom WordPress or Laravel site"
   ]
 }
