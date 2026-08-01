@@ -543,10 +543,26 @@
       "text_preview": "It's simple: If your project isn't containerized, you're building in the dark. Docker isn't just a tool; it's the ultimate translator for international project handovers.\n\nGone are the days of clients...",
       "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7488890469125619713/"
+    },
+    {
+      "id": "urn:li:share:7489243586593521664",
+      "timestamp": "2026-08-01T09:00:14.722024+00:00",
+      "post_type": "client_growth_story",
+      "topic": "How fixing a broken WordPress payment integration saved a US client's launch",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "freelance",
+        "mobileappdevelopment",
+        "paymentgateway"
+      ],
+      "text_preview": "Imagine a US client, just days from a critical online course launch. Pre-orders were rolling in, marketing was in full swing, but then the payments started failing.\n\nTheir WordPress site, meant to be ...",
+      "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7489243586593521664/"
     }
   ],
-  "last_updated": "2026-07-31T09:37:05.550788+00:00",
-  "total_posts": 34,
+  "last_updated": "2026-08-01T09:00:14.722043+00:00",
+  "total_posts": 35,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -574,6 +590,7 @@
     "Why PHP and Laravel are still the absolute kings of custom business applications",
     "Building CI/CD pipelines that deploy Laravel and Node.js apps without downtime",
     "Syncing external property APIs (like MLS) directly into a custom WordPress or Laravel site",
-    "How Docker simplifies handing over projects to international clients"
+    "How Docker simplifies handing over projects to international clients",
+    "How fixing a broken WordPress payment integration saved a US client's launch"
   ]
 }
