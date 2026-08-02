@@ -559,10 +559,26 @@
       "text_preview": "Imagine a US client, just days from a critical online course launch. Pre-orders were rolling in, marketing was in full swing, but then the payments started failing.\n\nTheir WordPress site, meant to be ...",
       "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7489243586593521664/"
+    },
+    {
+      "id": "urn:li:share:7489607159803043840",
+      "timestamp": "2026-08-02T09:04:57.972663+00:00",
+      "post_type": "client_growth_story",
+      "topic": "Building trust with international clients (US/Europe) as a remote developer",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "bookingsoftware",
+        "fiverr",
+        "reactnative"
+      ],
+      "text_preview": "A luxury real estate agency in Marbella, Spain, was losing potential buyers. Their manual viewing scheduling system was a mess.\n\nEmails, calls, and spreadsheets created constant double-bookings and mi...",
+      "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7489607159803043840/"
     }
   ],
-  "last_updated": "2026-08-01T09:00:14.722043+00:00",
-  "total_posts": 35,
+  "last_updated": "2026-08-02T09:04:57.972683+00:00",
+  "total_posts": 36,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
