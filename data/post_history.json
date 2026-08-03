@@ -575,10 +575,26 @@
       "text_preview": "A luxury real estate agency in Marbella, Spain, was losing potential buyers. Their manual viewing scheduling system was a mess.\n\nEmails, calls, and spreadsheets created constant double-bookings and mi...",
       "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7489607159803043840/"
+    },
+    {
+      "id": "urn:li:share:7489991626027646976",
+      "timestamp": "2026-08-03T10:32:41.818055+00:00",
+      "post_type": "niche_solutions",
+      "topic": "Why real estate agencies are moving away from generic templates to custom Flutter apps",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "api",
+        "laravel",
+        "vuejs"
+      ],
+      "text_preview": "Generic real estate templates are actively holding your business back.\n\nMany agencies still rely on off-the-shelf solutions or basic WordPress sites. These often lack the unique branding, specific fea...",
+      "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7489991626027646976/"
     }
   ],
-  "last_updated": "2026-08-02T09:04:57.972683+00:00",
-  "total_posts": 36,
+  "last_updated": "2026-08-03T10:32:41.818070+00:00",
+  "total_posts": 37,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
