@@ -591,10 +591,26 @@
       "text_preview": "Generic real estate templates are actively holding your business back.\n\nMany agencies still rely on off-the-shelf solutions or basic WordPress sites. These often lack the unique branding, specific fea...",
       "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7489991626027646976/"
+    },
+    {
+      "id": "urn:li:share:7490339217487757314",
+      "timestamp": "2026-08-04T09:33:54.105699+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Why PHP and Laravel are still the absolute kings of custom business applications",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "flutter",
+        "wordpress",
+        "upwork"
+      ],
+      "text_preview": "PHP and Laravel aren't just relevant; they are the absolute kings for custom business applications, period.\n\nWhile new frameworks emerge, PHP with Laravel offers unmatched efficiency and stability for...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7490339217487757314/"
     }
   ],
-  "last_updated": "2026-08-03T10:32:41.818070+00:00",
-  "total_posts": 37,
+  "last_updated": "2026-08-04T09:33:54.105715+00:00",
+  "total_posts": 38,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
