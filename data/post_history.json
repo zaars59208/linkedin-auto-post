@@ -607,10 +607,26 @@
       "text_preview": "PHP and Laravel aren't just relevant; they are the absolute kings for custom business applications, period.\n\nWhile new frameworks emerge, PHP with Laravel offers unmatched efficiency and stability for...",
       "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7490339217487757314/"
+    },
+    {
+      "id": "urn:li:share:7490403117109334017",
+      "timestamp": "2026-08-04T13:47:48.962418+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Why I chose React Native for my rental business app 'Bookhere'",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "realestateapp",
+        "freelance",
+        "bookingsoftware"
+      ],
+      "text_preview": "Choosing React Native for my rental business app, 'Bookhere', was all about delivering a unified experience efficiently.\n\nInstead of building two completely separate apps for iPhone and Android, React...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7490403117109334017/"
     }
   ],
-  "last_updated": "2026-08-04T09:33:54.105715+00:00",
-  "total_posts": 38,
+  "last_updated": "2026-08-04T13:47:48.962433+00:00",
+  "total_posts": 39,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
