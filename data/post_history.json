@@ -623,10 +623,26 @@
       "text_preview": "Choosing React Native for my rental business app, 'Bookhere', was all about delivering a unified experience efficiently.\n\nInstead of building two completely separate apps for iPhone and Android, React...",
       "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7490403117109334017/"
+    },
+    {
+      "id": "urn:li:share:7490700754870185984",
+      "timestamp": "2026-08-05T09:30:30.864038+00:00",
+      "post_type": "tech_discovery",
+      "topic": "The importance of clean architecture in long-term freelance projects",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "businessgrowth",
+        "php",
+        "b2b"
+      ],
+      "text_preview": "Prioritizing speed over clean architecture in long-term freelance projects is a direct path to project failure. It's not just a nice-to-have, it's fundamental.\n\nMany developers chase initial delivery ...",
+      "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7490700754870185984/"
     }
   ],
-  "last_updated": "2026-08-04T13:47:48.962433+00:00",
-  "total_posts": 39,
+  "last_updated": "2026-08-05T09:30:30.864053+00:00",
+  "total_posts": 40,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
