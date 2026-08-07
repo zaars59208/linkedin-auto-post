@@ -655,10 +655,26 @@
       "text_preview": "Picture a bustling property rental agency in Barcelona. Every month, their team spent days manually creating, checking, and sending hundreds of invoices for various tenants and properties. It was a te...",
       "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7491064242922536960/"
+    },
+    {
+      "id": "urn:li:share:7491404455267950592",
+      "timestamp": "2026-08-07T08:06:45.969508+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Migrating legacy PHP applications to modern Laravel architecture",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "realestateapp",
+        "laravel",
+        "upwork"
+      ],
+      "text_preview": "Migrating legacy PHP applications to modern Laravel isn't just a technical upgrade; it's a strategic move to unlock your business's future potential.\n\nOlder PHP systems often become tangled codebases,...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7491404455267950592/"
     }
   ],
-  "last_updated": "2026-08-06T09:34:53.615636+00:00",
-  "total_posts": 41,
+  "last_updated": "2026-08-07T08:06:45.969523+00:00",
+  "total_posts": 42,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -688,6 +704,7 @@
     "Syncing external property APIs (like MLS) directly into a custom WordPress or Laravel site",
     "How Docker simplifies handing over projects to international clients",
     "How fixing a broken WordPress payment integration saved a US client's launch",
-    "Client story: Automating manual invoice generation for a rental business"
+    "Client story: Automating manual invoice generation for a rental business",
+    "Migrating legacy PHP applications to modern Laravel architecture"
   ]
 }
