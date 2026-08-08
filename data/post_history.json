@@ -671,10 +671,26 @@
       "text_preview": "Migrating legacy PHP applications to modern Laravel isn't just a technical upgrade; it's a strategic move to unlock your business's future potential.\n\nOlder PHP systems often become tangled codebases,...",
       "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7491404455267950592/"
+    },
+    {
+      "id": "urn:li:share:7491760251642511361",
+      "timestamp": "2026-08-08T07:40:35.036542+00:00",
+      "post_type": "niche_solutions",
+      "topic": "Why real estate agencies are moving away from generic templates to custom Flutter apps",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "api",
+        "wordpress",
+        "freelance"
+      ],
+      "text_preview": "Real estate agencies are ditching templated apps. Here's why.\n\nMany property businesses start with a generic app or theme. It seems cost-effective initially, but these solutions quickly become a bottl...",
+      "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7491760251642511361/"
     }
   ],
-  "last_updated": "2026-08-07T08:06:45.969523+00:00",
-  "total_posts": 42,
+  "last_updated": "2026-08-08T07:40:35.036561+00:00",
+  "total_posts": 43,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
