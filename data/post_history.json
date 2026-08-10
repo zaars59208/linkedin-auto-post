@@ -703,10 +703,26 @@
       "text_preview": "Are you losing 40% of your potential rental bookings right now?\n\nMany rental businesses struggle with low conversion rates, often due to clunky booking processes, generic platforms, and a lack of dire...",
       "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7492123645012680704/"
+    },
+    {
+      "id": "urn:li:share:7492495119338823681",
+      "timestamp": "2026-08-10T08:20:41.137197+00:00",
+      "post_type": "client_growth_story",
+      "topic": "A real estate agency was losing leads due to slow load times. We rebuilt it in Laravel.",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "businessgrowth",
+        "flutter",
+        "mobileappdevelopment"
+      ],
+      "text_preview": "A prominent real estate agency in Portugal faced a silent problem that was costing them dearly. Their beautiful website, the cornerstone of their lead generation, was painfully slow.\n\nEvery second cou...",
+      "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7492495119338823681/"
     }
   ],
-  "last_updated": "2026-08-09T07:44:34.795997+00:00",
-  "total_posts": 44,
+  "last_updated": "2026-08-10T08:20:41.137211+00:00",
+  "total_posts": 45,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
