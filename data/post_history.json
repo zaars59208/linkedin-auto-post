@@ -735,10 +735,26 @@
       "text_preview": "Clean architecture isn't just a best practice; it's the ultimate client retention strategy. If your developer isn't prioritizing it, they're costing you money down the line.\n\nMany see it as an upfront...",
       "image_url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7492853104523120640/"
+    },
+    {
+      "id": "urn:li:share:7492922997691858944",
+      "timestamp": "2026-08-11T12:40:54.958841+00:00",
+      "post_type": "niche_solutions",
+      "topic": "The architecture behind 'Bookhere': my React Native booking & rental platform",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "api",
+        "laravel",
+        "php"
+      ],
+      "text_preview": "Your booking platform’s backend is likely a ticking time bomb.\n\nMany rental and e-commerce businesses face constant struggle with scalability. Their systems buckle under increased user traffic or comp...",
+      "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7492922997691858944/"
     }
   ],
-  "last_updated": "2026-08-11T08:03:11.447214+00:00",
-  "total_posts": 46,
+  "last_updated": "2026-08-11T12:40:54.958860+00:00",
+  "total_posts": 47,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
