@@ -719,10 +719,26 @@
       "text_preview": "A prominent real estate agency in Portugal faced a silent problem that was costing them dearly. Their beautiful website, the cornerstone of their lead generation, was painfully slow.\n\nEvery second cou...",
       "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7492495119338823681/"
+    },
+    {
+      "id": "urn:li:share:7492853104523120640",
+      "timestamp": "2026-08-11T08:03:11.447199+00:00",
+      "post_type": "tech_discovery",
+      "topic": "The importance of clean architecture in long-term freelance projects",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "vuejs",
+        "fiverr",
+        "angular"
+      ],
+      "text_preview": "Clean architecture isn't just a best practice; it's the ultimate client retention strategy. If your developer isn't prioritizing it, they're costing you money down the line.\n\nMany see it as an upfront...",
+      "image_url": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7492853104523120640/"
     }
   ],
-  "last_updated": "2026-08-10T08:20:41.137211+00:00",
-  "total_posts": 45,
+  "last_updated": "2026-08-11T08:03:11.447214+00:00",
+  "total_posts": 46,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
