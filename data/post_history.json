@@ -751,10 +751,26 @@
       "text_preview": "Your booking platform’s backend is likely a ticking time bomb.\n\nMany rental and e-commerce businesses face constant struggle with scalability. Their systems buckle under increased user traffic or comp...",
       "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7492922997691858944/"
+    },
+    {
+      "id": "urn:li:share:7493216959971631104",
+      "timestamp": "2026-08-12T08:09:01.472327+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Migrating legacy PHP applications to modern Laravel architecture",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "freelance",
+        "bookingsoftware",
+        "upwork"
+      ],
+      "text_preview": "Migrating legacy PHP applications to modern Laravel isn't just an option; it’s a strategic imperative for future-proofing your business.\n\nMany older PHP systems, while functional, suffer from outdated...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7493216959971631104/"
     }
   ],
-  "last_updated": "2026-08-11T12:40:54.958860+00:00",
-  "total_posts": 47,
+  "last_updated": "2026-08-12T08:09:01.472344+00:00",
+  "total_posts": 48,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
