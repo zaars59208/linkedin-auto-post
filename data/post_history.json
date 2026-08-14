@@ -783,10 +783,26 @@
       "text_preview": "Manual property updates are costing you leads and revenue.\n\nReliance on manual data entry for real estate, rentals, or e-commerce inventory is a critical bottleneck. It leads to inaccuracies, wasted s...",
       "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7493579931852062720/"
+    },
+    {
+      "id": "urn:li:share:7493941246151999488",
+      "timestamp": "2026-08-14T08:07:04.651254+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Building CI/CD pipelines that deploy Laravel and Node.js apps without downtime",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "techcommunity",
+        "wordpress",
+        "fiverr"
+      ],
+      "text_preview": "Deploying a new feature or critical fix should never mean your application goes offline, not even for a second.\n\nMy CI/CD pipelines for Laravel and Node.js applications are designed for true zero-down...",
+      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7493941246151999488/"
     }
   ],
-  "last_updated": "2026-08-13T08:11:20.687824+00:00",
-  "total_posts": 49,
+  "last_updated": "2026-08-14T08:07:04.651271+00:00",
+  "total_posts": 50,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
