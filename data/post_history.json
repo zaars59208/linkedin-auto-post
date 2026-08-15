@@ -799,10 +799,26 @@
       "text_preview": "Deploying a new feature or critical fix should never mean your application goes offline, not even for a second.\n\nMy CI/CD pipelines for Laravel and Node.js applications are designed for true zero-down...",
       "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7493941246151999488/"
+    },
+    {
+      "id": "urn:li:share:7494292196423221248",
+      "timestamp": "2026-08-15T07:21:37.705778+00:00",
+      "post_type": "client_growth_story",
+      "topic": "When a client asks for 'just a simple website' but actually needs a full SaaS platform",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "angular",
+        "php",
+        "flutter"
+      ],
+      "text_preview": "A property management company in Sydney, Australia, reached out with a seemingly simple request. They needed a new website, something clean and modern to showcase their listings. \"Just a few pages,\" t...",
+      "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7494292196423221248/"
     }
   ],
-  "last_updated": "2026-08-14T08:07:04.651271+00:00",
-  "total_posts": 50,
+  "last_updated": "2026-08-15T07:21:37.705794+00:00",
+  "total_posts": 51,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -833,6 +849,7 @@
     "How Docker simplifies handing over projects to international clients",
     "How fixing a broken WordPress payment integration saved a US client's launch",
     "Client story: Automating manual invoice generation for a rental business",
-    "Migrating legacy PHP applications to modern Laravel architecture"
+    "Migrating legacy PHP applications to modern Laravel architecture",
+    "When a client asks for 'just a simple website' but actually needs a full SaaS platform"
   ]
 }
