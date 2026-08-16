@@ -815,10 +815,26 @@
       "text_preview": "A property management company in Sydney, Australia, reached out with a seemingly simple request. They needed a new website, something clean and modern to showcase their listings. \"Just a few pages,\" t...",
       "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7494292196423221248/"
+    },
+    {
+      "id": "urn:li:share:7494654898354155523",
+      "timestamp": "2026-08-16T07:22:52.128693+00:00",
+      "post_type": "tech_discovery",
+      "topic": "Why good logging in Node.js/Express saves you from 3 AM client panics",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "upwork",
+        "api",
+        "businessgrowth"
+      ],
+      "text_preview": "The best error handling in Node.js isn't about catching every bug. It's about *knowing exactly what happened* when one slips through.\n\nWhen a client reports an issue, the clock starts ticking. Without...",
+      "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7494654898354155523/"
     }
   ],
-  "last_updated": "2026-08-15T07:21:37.705794+00:00",
-  "total_posts": 51,
+  "last_updated": "2026-08-16T07:22:52.128711+00:00",
+  "total_posts": 52,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -850,6 +866,7 @@
     "How fixing a broken WordPress payment integration saved a US client's launch",
     "Client story: Automating manual invoice generation for a rental business",
     "Migrating legacy PHP applications to modern Laravel architecture",
-    "When a client asks for 'just a simple website' but actually needs a full SaaS platform"
+    "When a client asks for 'just a simple website' but actually needs a full SaaS platform",
+    "Why good logging in Node.js/Express saves you from 3 AM client panics"
   ]
 }
