@@ -831,10 +831,26 @@
       "text_preview": "The best error handling in Node.js isn't about catching every bug. It's about *knowing exactly what happened* when one slips through.\n\nWhen a client reports an issue, the clock starts ticking. Without...",
       "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7494654898354155523/"
+    },
+    {
+      "id": "urn:li:share:7495022401953615874",
+      "timestamp": "2026-08-17T07:43:11.952876+00:00",
+      "post_type": "niche_solutions",
+      "topic": "Integrating complex payment gateways (Stripe/PayPal) seamlessly in accommodation platforms",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "nodejs",
+        "bookingsoftware",
+        "paymentgateway"
+      ],
+      "text_preview": "Lost bookings because of payment headaches?\n\nMany accommodation platforms struggle with unreliable or complicated payment systems. Guests abandon reservations when faced with confusing forms, limited ...",
+      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7495022401953615874/"
     }
   ],
-  "last_updated": "2026-08-16T07:22:52.128711+00:00",
-  "total_posts": 52,
+  "last_updated": "2026-08-17T07:43:11.952895+00:00",
+  "total_posts": 53,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
@@ -867,6 +883,7 @@
     "Client story: Automating manual invoice generation for a rental business",
     "Migrating legacy PHP applications to modern Laravel architecture",
     "When a client asks for 'just a simple website' but actually needs a full SaaS platform",
-    "Why good logging in Node.js/Express saves you from 3 AM client panics"
+    "Why good logging in Node.js/Express saves you from 3 AM client panics",
+    "Integrating complex payment gateways (Stripe/PayPal) seamlessly in accommodation platforms"
   ]
 }
