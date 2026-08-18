@@ -847,10 +847,26 @@
       "text_preview": "Lost bookings because of payment headaches?\n\nMany accommodation platforms struggle with unreliable or complicated payment systems. Guests abandon reservations when faced with confusing forms, limited ...",
       "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7495022401953615874/"
+    },
+    {
+      "id": "urn:li:share:7495381370752385024",
+      "timestamp": "2026-08-18T07:29:37.107643+00:00",
+      "post_type": "client_growth_story",
+      "topic": "Client story: Automating manual invoice generation for a rental business",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "mobileappdevelopment",
+        "b2b",
+        "fiverr"
+      ],
+      "text_preview": "Imagine running a bustling rental business in Spain, managing dozens of properties and tenants. Every single month, your team spends days manually creating and sending out invoices.\n\nThis was the real...",
+      "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7495381370752385024/"
     }
   ],
-  "last_updated": "2026-08-17T07:43:11.952895+00:00",
-  "total_posts": 53,
+  "last_updated": "2026-08-18T07:29:37.107660+00:00",
+  "total_posts": 54,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
