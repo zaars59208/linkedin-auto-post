@@ -879,10 +879,26 @@
       "text_preview": "Forget elaborate documentation. Docker is the single most important tool for seamless international project handovers.\n\nIt encapsulates your entire application environment: operating system, dependenc...",
       "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7495455657509175296/"
+    },
+    {
+      "id": "urn:li:share:7495743905389264896",
+      "timestamp": "2026-08-19T07:30:11.687297+00:00",
+      "post_type": "expertise_showcase",
+      "topic": "Optimizing database queries in Laravel to handle 10k+ daily users",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "api",
+        "flutter",
+        "businessgrowth"
+      ],
+      "text_preview": "Scaling Laravel for 10,000+ daily users isn't just about faster servers; it's about smarter database queries from day one. This is non-negotiable for high-traffic applications.\n\nOften, developers acci...",
+      "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7495743905389264896/"
     }
   ],
-  "last_updated": "2026-08-18T12:24:48.470343+00:00",
-  "total_posts": 55,
+  "last_updated": "2026-08-19T07:30:11.687315+00:00",
+  "total_posts": 56,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
