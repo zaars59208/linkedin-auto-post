@@ -927,10 +927,26 @@
       "text_preview": "**Your WordPress site doesn't have to be bloated to be powerful with custom plugins.**\n\nThis isn't just about writing code; it's about architectural thinking. We build custom plugins with a \"single re...",
       "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
       "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7496469789327065089/"
+    },
+    {
+      "id": "urn:li:share:7496903639006064640",
+      "timestamp": "2026-08-22T12:18:34.159614+00:00",
+      "post_type": "client_growth_story",
+      "topic": "A real estate agency was losing leads due to slow load times. We rebuilt it in Laravel.",
+      "hashtags": [
+        "webdevelopment",
+        "softwareengineering",
+        "paymentgateway",
+        "fiverr",
+        "angular"
+      ],
+      "text_preview": "A real estate agency in Spain was facing a silent crisis. Their beautiful property listings weren't converting. Potential buyers would click, wait, and then simply abandon the site before the page eve...",
+      "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop",
+      "linkedin_url": "https://www.linkedin.com/feed/update/urn:li:share:7496903639006064640/"
     }
   ],
-  "last_updated": "2026-08-21T07:34:35.827426+00:00",
-  "total_posts": 58,
+  "last_updated": "2026-08-22T12:18:34.159630+00:00",
+  "total_posts": 59,
   "topics_used": [
     "Automating property bookings and tenant management with Node.js and Express",
     "WordPress theme customization: going beyond page builders to write actual code",
